@@ -3,14 +3,12 @@ const form = document.querySelector('.form');
 
 form.addEventListener('submit', event =>{
     event.preventDefault();
-    console.log('Submit');
     inputs.forEach(input => {
     const curSpan = input.nextElementSibling;
     const curParent = input.parentElement;
     // console.log(input.name)
     // console.log(!input.value)
     if(!input.value && input.name !== 'email'){
-        console.log(input.name )
         input.classList.add('error-img');
         curSpan.classList.remove('hidden');
         curParent.style.marginBottom = '7px';
